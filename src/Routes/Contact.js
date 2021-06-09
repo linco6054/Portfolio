@@ -1,6 +1,27 @@
 import React from "react";
-
+import emailjs from "emailjs-com";
 function Contact() {
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_6sajf3l",
+        "template_zc2773p",
+        e.target,
+        "user_Nd9TUQTvoONWtXzZFpIIf"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    e.target.reset();
+  }
   return (
     <section className="contact section " id="contact">
       <h2 className="section_title">Contact Me</h2>
@@ -29,13 +50,15 @@ function Contact() {
             </div>
           </div>
         </div>
-        <form action="submit" className="contact_form grid">
+        <form onSubmit={handleSubmit} className="contact_form grid">
+          {/* <h1 id={show ? "d-none" : null}>{message}</h1> */}
           <div className="contact_inputs grid">
             <div className="contact_content">
               <label htmlFor="Name" className="contact_lable">
                 Name
               </label>
               <input
+                required
                 name="name"
                 id="name"
                 type="text "
@@ -47,9 +70,10 @@ function Contact() {
                 Email
               </label>
               <input
-                name="email"
+                required
+                name="Email"
                 id="email"
-                type="email "
+                type="email"
                 className="contact_input"
               />
             </div>
@@ -59,7 +83,7 @@ function Contact() {
               Project
             </label>
             <input
-              name="Project"
+              name="project"
               id="Project"
               type="text "
               className="contact_input"
@@ -71,17 +95,21 @@ function Contact() {
             </label>
             <textarea
               className="contact_input"
-              name="Message"
+              name="message"
               id="Message"
               cols="0"
               rows="7"
             ></textarea>
           </div>
           <div>
-            <a href="hh#" className="button button--flex">
+            <button
+              // onClick={() => sendEmail()}
+              href="hh#"
+              className="btx button button--flex"
+            >
               Send Message
               <i className="uil uil-message button_icon"></i>
-            </a>
+            </button>
           </div>
         </form>
       </div>

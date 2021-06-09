@@ -84,6 +84,7 @@ const Qualifications = ({
     } else {
       setEven(false);
     }
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (showQualification) {
     return (
@@ -135,6 +136,7 @@ const WorkExperience = ({
     } else {
       setEven(false);
     }
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (showQualification === false) {
     return (

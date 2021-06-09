@@ -53,16 +53,16 @@ export const Work = [
   },
   {
     id: 3,
-    title: "ICT Internship ",
+    title: "ICT Instructor ",
     place: "Narobi",
-    organization: "Global Peace Foundation",
-    period: "Jan 2020 - June-2020",
+    organization: "Ubunifu Collage",
+    period: "Jan 2021 - ",
   },
-  {
-    id: 4,
-    title: "ICT Internship ",
-    place: "Narobi",
-    organization: "Global Peace Foundation",
-    period: "Jan 2020 - June-2020",
-  },
+  // {
+  //   id: 4,
+  //   title: "ICT Internship ",
+  //   place: "Narobi",
+  //   organization: "Global Peace Foundation",
+  //   period: "Jan 2020 - June-2020",
+  // },
 ];

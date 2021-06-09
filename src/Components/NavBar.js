@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { Link } from "react-scroll";
 function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
   const [theme, setTheme] = useState(false);
@@ -10,64 +10,64 @@ function NavBar() {
     <div>
       <header className={`header scroll-header`} id="header">
         <nav className="nav container">
-          <a href="jhjhs#" className="nav_logo">
+          <Link to="home" className="nav_logo">
             Lincoln
-          </a>
+          </Link>
           <div className="nav_menu" id={showMenu ? "show-menu" : null}>
             <ul className="nav_list grid">
               <li className="nav_item">
-                <a
+                <Link
                   className="nav_link"
                   onClick={() => setShowMenu(!showMenu)}
-                  href="home#"
+                  to="home"
                 >
                   <i className="nav_icon uil uil-estate"></i> Home
-                </a>
+                </Link>
               </li>
               <li className="nav_item">
-                <a
+                <Link
                   className="nav_link"
                   onClick={() => setShowMenu(!showMenu)}
-                  href="About#"
+                  to="about"
                 >
                   <i className="nav_icon uil uil-user"></i> About
-                </a>
+                </Link>
               </li>
               <li className="nav_item">
-                <a
+                <Link
                   className="nav_link"
                   onClick={() => setShowMenu(!showMenu)}
-                  href="skills#"
+                  to="skills"
                 >
                   <i className="nav_icon uil uil-file-alt"></i> Skills
-                </a>
+                </Link>
               </li>
               <li className="nav_item">
-                <a
+                <Link
                   className="nav_link"
                   onClick={() => setShowMenu(!showMenu)}
-                  href="Service#"
+                  to="services"
                 >
                   <i className="nav_icon uil uil-briefcase-alt"></i> Services
-                </a>
+                </Link>
               </li>
               <li className="nav_item">
-                <a
+                <Link
                   className="nav_link"
                   onClick={() => setShowMenu(!showMenu)}
-                  href="Portfolio#"
+                  to="portfolio"
                 >
                   <i className="nav_icon uil uil-scenery"></i> Portfolio
-                </a>
+                </Link>
               </li>
               <li className="nav_item">
-                <a
+                <Link
                   className="nav_link"
                   onClick={() => setShowMenu(!showMenu)}
-                  href="Contact#"
+                  to="contact"
                 >
                   <i className="nav_icon uil uil-message"></i> Contact
-                </a>
+                </Link>
               </li>
             </ul>
             <i

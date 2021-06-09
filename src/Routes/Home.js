@@ -1,5 +1,5 @@
 import React from "react";
-import bg from "./../Assets/Images/bgclean.png";
+
 import profile from "./../Assets/Images/me.png";
 function Home() {
   const linkedinUrl = "https://www.linkedin.com/in/lincoln-kantet-5ba48616a/";

@@ -319,6 +319,9 @@ img {
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
 }
+.btx {
+  border: none;
+}
 .button:hover {
   background-color: var(--first-color-alt);
 }
@@ -743,7 +746,10 @@ img {
   outline: none;
   padding: 0.25rem 0.5rem 0.5rem 0;
 }
-
+/* contact form */
+#d-none {
+  display: none;
+}
 /* ==============footer ================================== */
 
 .footer {
@@ -1064,8 +1070,8 @@ img {
   .contact_form {
     width: 460px;
   }
-  .contact_inputs{
-    grid-template-columns: repeat(2,1fr);
+  .contact_inputs {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 /* active Links */
